@@ -1,0 +1,79 @@
+.menu {
+  width: 255px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-right: 1px solid #e8e8e8;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+  background-color: #fff;
+  box-shadow: 2px 0 8px 0 rgba(29, 35, 41, 0.05);
+}
+.menu-sub {
+  min-height: 40px;
+  padding-left: 24px;
+  line-height: 40px;
+  cursor: pointer;
+  transition: all 0.4s;
+  user-select: none;
+}
+.menu-sub .active,
+.menu-sub span:hover {
+  color: #1890ff;
+}
+.menu-title {
+  height: 64px;
+  line-height: 64px;
+  color: #1890ff;
+  text-align: center;
+  background: #fff;
+  box-shadow: 1px 1px 0 0 #e8e8e8;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.menu-list div {
+  padding-left: 24px;
+}
+
+.menu-submenu-arrow {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  width: 10px;
+  box-sizing: border-box;
+}
+.menu-submenu-arrow::before {
+  content: "";
+
+  position: absolute;
+  vertical-align: baseline;
+  background: #fff;
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65));
+  width: 6px;
+  height: 1.5px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  transform: rotate(-45deg) translateX(2px);
+}
+.menu-submenu-arrow::after {
+  content: "";
+  position: absolute;
+  vertical-align: baseline;
+  background: #fff;
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65));
+  width: 6px;
+  height: 1.5px;
+  border-radius: 2px;
+  transform: rotate(45deg) translateX(-2px);
+}
+.menu-item {
+  position: relative;
+}
+.menu-sub-open .menu-submenu-arrow::before {
+  transform: rotate(45deg) translateX(2px);
+}
+.menu-sub-open .menu-submenu-arrow::after {
+  transform: rotate(-45deg) translateX(-2px);
+}
