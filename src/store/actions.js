@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const cooking = name => ({ type: GET_API_COOKING, data: name });
 export const setUser = name => ({ type: USER, data: name });
-export const login = name => ({ type: SIGN_IN, data: name })
+export const login = () => ({ type: SIGN_IN })
 
 export const recreational = name => {
   return { type: GET_API_RECREATIONAL, data: name };

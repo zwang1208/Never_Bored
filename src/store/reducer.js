@@ -28,7 +28,7 @@ function user(state = {}, action) {
 function auth(state = {auth: false}, action) {
   switch (action.type) {
     case SIGN_IN:
-      return action.data;
+      return {...state, auth: true};
     default:
       return state;
   }

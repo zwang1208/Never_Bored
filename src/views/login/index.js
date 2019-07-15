@@ -18,7 +18,7 @@ const buttonStyle = {
 class Login extends Component {
 
     handleLogin = () =>{
-        this.props.login({auth: true})
+        this.props.login()
     }
     render() {
         if(this.props.auth.auth) {
