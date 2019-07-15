@@ -47,7 +47,7 @@ class SliderShow extends Component {
   componentDidMount() {
     let intervalId = setInterval(() => {
       this.callBored();
-    }, 1500);
+    }, 2500);
     this.setState({ intervalId: intervalId });
   }
 
