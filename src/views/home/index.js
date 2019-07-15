@@ -68,7 +68,7 @@ class Home extends Component {
               component={Cooking}
               {...this.props}
             />
-            <PrivateRoute authed={this.props.auth.auth} path="/home/settings" component={Settings} />
+            <Route path="/home/settings" exact component={Settings} />
             <Route path="/home/profile" exact component={Profile} />
             <Route path="/home/login" exact component={Login} />
             <Route render={() => <Redirect to="/home" />} />

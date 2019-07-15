@@ -59,7 +59,7 @@ class SliderShow extends Component {
     return (
       <div style={background}>
         <h1>Feeling Bored?</h1>
-        {this.state.activity? <h1>{this.state.activity}</h1>: <h1>Loading...</h1>}
+        { this.state.activity? <h1>{this.state.activity}</h1>: <h1>Loading...</h1> }
           <Button onclick={this.jumpToHome} style={buttonStyle}>Explore</Button>
       </div>
     );

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Redirect } from "react-router-dom";
 import { setUser } from "../../store/actions";
 import Button from "../../component/button/index";
 
@@ -97,8 +98,10 @@ class Settings extends Component {
     this.props.history.push("/home/profile");
   }
   render() {
+    console.log(this.props)
     return (
       <div style={{ padding: "5%" }}>
+        { this.props.auth.auth? null: <Redirect to="/home/login" />}
         <form>
           <h1 style={{ textAlign: "center", marginBottom: 20 }}>Profile</h1>
           <input
@@ -172,6 +175,7 @@ class Settings extends Component {
 function mapStateToProps(state) {
   return {
     user: state.user,
+    auth: state.auth
   };
 }
 
