@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-import {connect} from "react-redux"
 
 import Menu from "../../component/menu";
 import Recreational from "../recreational";
@@ -8,7 +7,6 @@ import Cooking from "../cooking";
 import Settings from "../settings";
 import Profile from "../profile";
 import Login from "../login"
-import PrivateRoute from "../../component/privateRoute/index"
 
 class Home extends Component {
   constructor(props) {
@@ -79,6 +77,4 @@ class Home extends Component {
   }
 }
 
-export default connect(
-  state => state,
-)(Home)
+export default Home
