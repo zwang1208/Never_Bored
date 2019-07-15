@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Person(props) {
+function Person(props) {
   return (
     <svg
       width={props.width}
@@ -20,3 +20,5 @@ export default function Person(props) {
     </svg>
   );
 }
+
+export default React.memo(Person)

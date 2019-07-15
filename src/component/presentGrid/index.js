@@ -14,7 +14,7 @@ const buttonStyle = {
   color: "#fff"
 };
 
-export default function Grid({ type, activity, participants, onclick }) {
+function Grid({ type, activity, participants, onclick }) {
 
   function renderParticipants(participants) {
     let iconArray = [];
@@ -49,3 +49,5 @@ export default function Grid({ type, activity, participants, onclick }) {
     </div>
   );
 }
+
+export default React.memo(Grid)

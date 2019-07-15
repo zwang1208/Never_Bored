@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Button({ onclick, children, className, style}) {
+function Button({ onclick, children, className, style}) {
 
   return (
     <button style={style} onClick={onclick} className={className}>
@@ -8,3 +8,5 @@ export default function Button({ onclick, children, className, style}) {
     </button>
   );
 }
+
+export default React.memo(Button)
